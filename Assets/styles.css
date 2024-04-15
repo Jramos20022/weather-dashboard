@@ -1,0 +1,140 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .site-header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 216);
+  }
+  
+  .site-header h1 {
+    color: white;
+    font-size: 2em;
+  }
+  
+  .main-content {
+    display: flex;
+    color: #0c0c0c;
+  }
+  
+  .weather-dashboard {
+    margin: 10px;
+    flex: 75%;
+  }
+  
+  .weather-sidebar {
+    margin: 10px;
+    flex: 25%;
+    border-radius: 5px;
+  }
+  
+  .search-section {
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-section input {
+    border: #333031;
+    height: 30px;
+    padding: 5px;
+    -webkit-animation-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .search-section button {
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #8d8182;
+    border: 0;
+    color: #333031;
+  }
+  
+  .search-section #error {
+    color: #333031;
+    font-size: 0.8em;
+    height: 20px;
+    margin-top: 2px;
+  }
+  
+  .recent-section {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  .recent-section .recent {
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .weather-details {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .weather-details .location {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .weather-details .info {
+    line-height: 2em;
+  }
+  
+  .forecast {
+    margin-top: 25px;
+  }
+  
+  .forecast-days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    
+  }
+  
+  .forecast-day .info {
+    color: white;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    line-height: 2.5em;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .weather-sidebar,
+    .weather-dashboard {
+      width: 95%;
+    }
+  
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .forecast-days {
+      flex-direction: column;
+    }
+  
+    .forecast-day {
+      width: 100%;
+      min-height: auto;
+      margin-top: 10px;
+    }
+  }

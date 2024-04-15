@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="Assets/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="site-header">
+      <h1>WEATHER DASHBOARD</h1>
+    </div>
+
+    <div class="main-content">
+      <!-- Left hand Side bar section -->
+      <aside class="weather-sidebar">
+        <div class="search-section">
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Enter a location"
+          />
+          <button type="button" class="btn btn-primary btn-lg" id="searchButton">Search</button>
+          <div id="error"></div>
+        </div>
+        <hr />
+        <div class="recent-section" id="search_history">
+          <h2>Recent Locations</h2>
+          <ul id="recent_locations"></ul>
+        </div>
+      </aside>
+
+      <!-- Main Dashboard Area -->
+      <section class="weather-dashboard">
+        <div id="weather" class="weather-details">
+          <div class="weather-icon">
+            <div class="location" id="city_name">Enter a Location</div>
+            <img id="weather_icon" src="" alt="Weather Icon" />
+          </div>
+          <div class="weather-info">
+            <div class="temperature">
+              <span>Temperature:</span>
+              <span id="temp_value"></span>
+            </div>
+            <div class="wind">
+              <span>Wind:</span>
+              <span id="wind_value"></span>
+            </div>
+            <div class="humidity">
+              <span>Humidity:</span>
+              <span id="humid_value"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="forecast" class="forecast">
+          <h2>5-Day Forecast</h2>
+          <div id="forecast_items" class="forecast-days"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="Assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
